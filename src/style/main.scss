@@ -1,0 +1,124 @@
+// reset CSS
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+button {
+  text-transform: capitalize !important;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Epilogue", sans-serif;
+  font-size: 1rem;
+}
+
+// BUTTON
+.btn {
+  &--wide {
+    width: 350px;
+  }
+}
+
+// HOME
+.home {
+  display: flex;
+  height: 100vh;
+
+  &__image {
+    width: 50%;
+    object-fit: cover;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+  }
+
+  &__title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  &__subtitle {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .mt1 {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .home {
+    flex-direction: column-reverse;
+
+    &__image {
+      width: 100%;
+      max-height: 50%;
+    }
+
+    &__text {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    &__title {
+      line-height: 1.1;
+      font-size: 3rem;
+    }
+
+    &__subtitle {
+      font-size: 1.7rem;
+    }
+  }
+}
