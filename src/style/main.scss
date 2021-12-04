@@ -9,6 +9,8 @@
   margin: 0;
 }
 
+$clr-gray-light: #dedede;
+
 html,
 body {
   height: 100%;
@@ -120,5 +122,27 @@ body {
     &__subtitle {
       font-size: 1.7rem;
     }
+  }
+}
+
+// AUTHENTICATION
+.authenticate {
+  max-width: 500px;
+  margin: 5% auto 0;
+  padding: 2rem 1rem;
+  border: 1px solid $clr-gray-light;
+  border-radius: 1rem;
+
+  .MuiTextField-root {
+    display: block;
+    margin: 1rem 0;
+  }
+
+  .MuiOutlinedInput-root {
+    width: 100%;
+  }
+
+  &__link {
+    margin-top: 1rem;
   }
 }
