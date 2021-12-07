@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Hero from "./pages/Hero";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Explore from "./pages/Explore";
-import Bookmarks from "./pages/Bookmarks";
+import Hero from "./hero";
+import Login from "./authentication/Login";
+import Register from "./authentication/Register";
+import Explore from "./explore";
+import Bookmarks from "./bookmarks";
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./utils/customTheme";
 import "./style/main.scss";
-import Home from "./pages/Home";
+import Home from "./home";
 import { Navigate } from "react-router";
 
 function PrivateRoute({ children }) {
