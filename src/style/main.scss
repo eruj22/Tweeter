@@ -68,8 +68,8 @@ body {
   }
 }
 
-// HOME
-.home {
+// HERO
+.hero {
   display: flex;
   height: 100vh;
 
@@ -101,12 +101,12 @@ body {
 }
 
 @media (max-width: 1200px) {
-  .home {
+  .hero {
     flex-direction: column-reverse;
 
     &__image {
       width: 100%;
-      max-height: 50%;
+      height: 50%;
     }
 
     &__text {
@@ -133,16 +133,17 @@ body {
   border: 1px solid $clr-gray-light;
   border-radius: 1rem;
 
-  .MuiTextField-root {
-    display: block;
-    margin: 1rem 0;
-  }
-
-  .MuiOutlinedInput-root {
-    width: 100%;
+  .MuiButton-root {
+    margin-top: 1rem;
   }
 
   &__link {
     margin-top: 1rem;
+  }
+
+  &__error {
+    margin-top: 0.5rem;
+    color: red;
+    font-weight: bold;
   }
 }

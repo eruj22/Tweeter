@@ -4,13 +4,23 @@ import Button from "@mui/material/Button";
 import validate from "../utils/validateRegister";
 import useForm from "../hooks/useForm";
 import { Link } from "react-router-dom";
+import { useAuthContext } from "../context/authContext";
 
 function Register() {
   const { handleChange, values, handleSubmit, errors } = useForm(validate);
+  const { registerErrorMessage } = useAuthContext();
+
+  const newRegisterErrorMessage = registerErrorMessage.includes(
+    "duplicate key error"
+  )
+    ? "Email already in use"
+    : registerErrorMessage;
 
   return (
     <main className="authenticate">
       <h1 className="authenticate__title">Create your account</h1>
+
+      <p className="authenticate__error">{newRegisterErrorMessage}</p>
 
       <form className="authenticate__form" onSubmit={handleSubmit}>
         <TextField
@@ -18,6 +28,8 @@ function Register() {
           variant="outlined"
           type="text"
           name="name"
+          fullWidth
+          margin="normal"
           error={errors.name && true}
           helperText={errors.name}
           value={values.name}
@@ -28,6 +40,8 @@ function Register() {
           variant="outlined"
           type="email"
           name="email"
+          fullWidth
+          margin="normal"
           error={errors.email && true}
           helperText={errors.email}
           value={values.email}
@@ -38,6 +52,8 @@ function Register() {
           variant="outlined"
           type="password"
           name="password"
+          fullWidth
+          margin="normal"
           error={errors.password && true}
           helperText={errors.password}
           value={values.password}
@@ -48,6 +64,8 @@ function Register() {
           variant="outlined"
           type="password"
           name="passwordRepeat"
+          fullWidth
+          margin="normal"
           error={errors.passwordRepeat && true}
           helperText={errors.passwordRepeat}
           value={values.passwordRepeat}

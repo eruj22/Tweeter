@@ -4,30 +4,26 @@ import Button from "@mui/material/Button";
 import validate from "../utils/validateLogin";
 import useForm from "../hooks/useForm";
 import { Link } from "react-router-dom";
+import { useAuthContext } from "../context/authContext";
 
 function Login() {
   const { handleChange, values, handleSubmit, errors } = useForm(validate);
+  const { loginErrorMessage } = useAuthContext();
 
   return (
     <main className="authenticate">
       <h1 className="authenticate__title">Login to your account</h1>
 
+      <p className="authenticate__error">{loginErrorMessage}</p>
+
       <form className="authenticate__form" onSubmit={handleSubmit}>
-        <TextField
-          label="Name"
-          variant="outlined"
-          type="text"
-          name="name"
-          error={errors.name && true}
-          helperText={errors.name}
-          value={values.name}
-          onChange={handleChange}
-        />
         <TextField
           label="Email"
           variant="outlined"
           type="email"
           name="email"
+          fullWidth
+          margin="normal"
           error={errors.email && true}
           helperText={errors.email}
           value={values.email}
@@ -38,6 +34,8 @@ function Login() {
           variant="outlined"
           type="password"
           name="password"
+          fullWidth
+          margin="normal"
           error={errors.password && true}
           helperText={errors.password}
           value={values.password}
