@@ -9,6 +9,8 @@
   margin: 0;
 }
 
+$clr-gray-light: #dedede;
+
 html,
 body {
   height: 100%;
@@ -66,8 +68,8 @@ body {
   }
 }
 
-// HOME
-.home {
+// HERO
+.hero {
   display: flex;
   height: 100vh;
 
@@ -99,12 +101,12 @@ body {
 }
 
 @media (max-width: 1200px) {
-  .home {
+  .hero {
     flex-direction: column-reverse;
 
     &__image {
       width: 100%;
-      max-height: 50%;
+      height: 50%;
     }
 
     &__text {
@@ -120,5 +122,28 @@ body {
     &__subtitle {
       font-size: 1.7rem;
     }
+  }
+}
+
+// AUTHENTICATION
+.authenticate {
+  max-width: 500px;
+  margin: 5% auto 0;
+  padding: 2rem 1rem;
+  border: 1px solid $clr-gray-light;
+  border-radius: 1rem;
+
+  .MuiButton-root {
+    margin-top: 1rem;
+  }
+
+  &__link {
+    margin-top: 1rem;
+  }
+
+  &__error {
+    margin-top: 0.5rem;
+    color: red;
+    font-weight: bold;
   }
 }
