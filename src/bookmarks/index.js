@@ -1,10 +1,12 @@
 import React from "react";
+import Navigation from "../components/Navigation";
 
 function Bookmarks() {
   return (
-    <div>
+    <section className="bookmarks">
+      <Navigation />
       <h1>bookmarks</h1>
-    </div>
+    </section>
   );
 }
 

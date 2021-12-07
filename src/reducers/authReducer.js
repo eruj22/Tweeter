@@ -2,6 +2,8 @@ const reducer = (state, action) => {
   const { type, payload } = action;
 
   if (type === "REGISTER_SUCCESS") {
+    localStorage.setItem("user", JSON.stringify(payload));
+
     return {
       ...state,
       registerFailure: false,
@@ -18,6 +20,8 @@ const reducer = (state, action) => {
   }
 
   if (type === "LOGIN_SUCCESS") {
+    localStorage.setItem("user", JSON.stringify(payload));
+
     return {
       ...state,
       loginFailure: false,

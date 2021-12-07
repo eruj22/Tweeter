@@ -1,17 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { useAuthContext } from "../context/authContext";
+import Navigation from "../components/Navigation";
 
 function Home() {
-  const { logout } = useAuthContext();
-
   return (
-    <div>
+    <section className="home">
+      <Navigation />
       <h1>home</h1>
-      <Link to="/" onClick={logout}>
-        logout
-      </Link>
-    </div>
+    </section>
   );
 }
 

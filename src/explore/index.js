@@ -1,10 +1,12 @@
 import React from "react";
+import Navigation from "../components/Navigation";
 
 function Explore() {
   return (
-    <div>
+    <section className="explore">
+      <Navigation />
       <h1>explore</h1>
-    </div>
+    </section>
   );
 }
 
