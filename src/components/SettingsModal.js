@@ -11,7 +11,7 @@ function SettingsModal({ isOpen }) {
 
   return (
     <div className={`settingsModal ${isOpen && "settingsModal--show"}`}>
-      <LinkElement icon={<MdAccountCircle />} to="#">
+      <LinkElement icon={<MdAccountCircle />} to="/profile">
         my profile
       </LinkElement>
       <LinkElement icon={<HiUserGroup />} to="#">

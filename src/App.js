@@ -5,6 +5,8 @@ import Login from "./pages/authentication/Login";
 import Register from "./pages/authentication/Register";
 import Explore from "./pages/explore";
 import Bookmarks from "./pages/bookmarks";
+import Navigation from "./components/Navigation";
+import Profile from "./pages/profile";
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./utils/customTheme";
 import "./style/main.scss";
@@ -29,6 +31,7 @@ function App() {
             path="/home"
             element={
               <PrivateRoute>
+                <Navigation />
                 <Home />
               </PrivateRoute>
             }
@@ -37,6 +40,7 @@ function App() {
             path="/explore"
             element={
               <PrivateRoute>
+                <Navigation />
                 <Explore />
               </PrivateRoute>
             }
@@ -45,7 +49,17 @@ function App() {
             path="/bookmarks"
             element={
               <PrivateRoute>
+                <Navigation />
                 <Bookmarks />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <PrivateRoute>
+                <Navigation />
+                <Profile />
               </PrivateRoute>
             }
           />

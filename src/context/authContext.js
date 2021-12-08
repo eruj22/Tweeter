@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (user) => {
     await axios
-      .post("http://localhost:5000/api/v1/auth/login", {
+      .post(`${process.env.REACT_APP_API_AUTH}/login`, {
         ...user,
       })
       .then((res) => {
@@ -31,7 +31,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (user) => {
     axios
-      .post("http://localhost:5000/api/v1/auth/register", {
+      .post(`${process.env.REACT_APP_API_AUTH}/register`, {
         ...user,
       })
       .then((res) => {
