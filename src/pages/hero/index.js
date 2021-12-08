@@ -1,5 +1,5 @@
 import React from "react";
-import hero from "../assets/hero.png";
+import hero from "../../assets/hero.png";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 

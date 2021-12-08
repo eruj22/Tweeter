@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
-import { useAuthContext } from "../context/authContext";
+import { useAuthContext } from "../../context/authContext";
 
 const useForm = (validate) => {
   const { login, register, loginFailure, registerFailure } = useAuthContext();

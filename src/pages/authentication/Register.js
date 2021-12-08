@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import validate from "./validateRegister";
 import useForm from "./useForm";
 import { Link } from "react-router-dom";
-import { useAuthContext } from "../context/authContext";
+import { useAuthContext } from "../../context/authContext";
 
 function Register() {
   const { handleChange, values, handleSubmit, errors } = useForm(validate);
