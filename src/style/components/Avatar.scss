@@ -1,0 +1,21 @@
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &__date {
+    font-size: 0.7rem;
+    color: $clr-text-gray;
+  }
+
+  &--withButton {
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    border-top: 1px solid $clr-gray-light;
+  }
+
+  .MuiButton-contained {
+    margin-left: auto;
+    padding: 2px 12px;
+  }
+}

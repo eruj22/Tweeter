@@ -1,0 +1,21 @@
+.authenticate {
+  max-width: 500px;
+  margin: 5% auto 0;
+  padding: 2rem 1rem;
+  border: 1px solid $clr-gray-light;
+  border-radius: 1rem;
+
+  .MuiButton-root {
+    margin-top: 1rem;
+  }
+
+  &__link {
+    margin-top: 1rem;
+  }
+
+  &__error {
+    margin-top: 0.5rem;
+    color: red;
+    font-weight: bold;
+  }
+}

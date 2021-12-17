@@ -1,0 +1,144 @@
+.home {
+  background-color: $clr-gray-light;
+  padding: 2rem 0;
+  min-height: 100vh;
+
+  &__flex {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  &__feed {
+    width: 70%;
+  }
+
+  &__more {
+    width: 30%;
+  }
+}
+
+.tweet {
+  background-color: $clr-bg-white;
+  padding: 1rem;
+  border-radius: $border-radius;
+  margin-bottom: 2.5rem;
+
+  &__line {
+    border: 1px solid $clr-gray-light;
+    margin: 0.5rem 0;
+  }
+
+  &__textarea {
+    border: none;
+    padding: 0.5rem;
+    resize: none;
+    width: 100%;
+  }
+
+  &__button {
+    color: $clr-blue;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  &__icon {
+    font-size: 20px;
+  }
+
+  .MuiButton-root {
+    margin-left: auto;
+  }
+}
+
+.post {
+  background-color: $clr-bg-white;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: $border-radius;
+
+  &__description {
+    margin: 0.8rem 0;
+  }
+
+  &__stats {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+
+  &__action {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid $clr-gray-light;
+    border-top: 1px solid $clr-gray-light;
+  }
+
+  &__reply {
+    position: relative;
+    padding-top: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__addImage {
+    position: absolute;
+    font-size: 18px;
+    top: 18px;
+    right: 10px;
+    color: $clr-text-gray;
+  }
+
+  .MuiOutlinedInput-input {
+    padding: 0.4rem;
+  }
+
+  .MuiFormControl-root {
+    flex-grow: 1;
+    background-color: $clr-gray-light;
+  }
+
+  .MuiInputLabel-root {
+    top: -0.5rem;
+  }
+
+  .MuiButton-text {
+    &:hover {
+      background-color: $clr-gray-light;
+    }
+  }
+}
+
+.trends {
+  padding: 0.5rem 1rem;
+  border-radius: $border-radius;
+  background-color: $clr-bg-white;
+  margin-bottom: 1rem;
+
+  &__items {
+    border-top: 1px solid $clr-gray-light;
+    padding: 1rem 0;
+  }
+
+  &__item {
+    margin-bottom: 0.5rem;
+  }
+
+  &__hashtag {
+    font-size: 1.2rem;
+  }
+}
+
+.followAside {
+  background-color: $clr-bg-white;
+  padding: 0.5rem 1rem;
+  border-radius: $border-radius;
+
+  &__description {
+    margin: 0.5rem 0;
+    color: $clr-text-gray;
+  }
+}

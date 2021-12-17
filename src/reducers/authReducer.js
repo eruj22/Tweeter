@@ -8,6 +8,7 @@ const reducer = (state, action) => {
       ...state,
       registerFailure: false,
       user: payload,
+      registerErrorMessage: "",
     };
   }
 
@@ -26,6 +27,7 @@ const reducer = (state, action) => {
       ...state,
       loginFailure: false,
       user: payload,
+      loginErrorMessage: "",
     };
   }
 
@@ -40,8 +42,6 @@ const reducer = (state, action) => {
   if (type === "LOGOUT") {
     return {
       ...state,
-      registerErrorMessage: "",
-      loginErrorMessage: "",
       loginFailure: true,
       registerFailure: true,
     };

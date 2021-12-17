@@ -1,0 +1,63 @@
+.profile {
+  background-color: $clr-gray-light;
+
+  &__cover {
+    object-fit: cover;
+    width: 100%;
+    max-height: 400px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    background-color: $clr-bg-white;
+    border-radius: $border-radius;
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    transform: translateY(-3rem);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    gap: 2rem;
+  }
+
+  &__name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-right: 2rem;
+  }
+
+  &__flex {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__desc {
+    color: $clr-text-gray;
+  }
+
+  &__stats {
+    color: $clr-text-gray;
+
+    span {
+      color: $clr-text-black;
+      font-weight: bold;
+    }
+  }
+
+  .MuiButton-root {
+    margin-left: auto;
+  }
+
+  .MuiAvatar-root {
+    width: 150px;
+    height: 150px;
+    transform: translateY(-3rem);
+    border: 3px solid $clr-bg-white;
+  }
+}
