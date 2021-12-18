@@ -5,13 +5,15 @@ import { HiUserGroup } from "react-icons/hi";
 import { IoMdSettings } from "react-icons/io";
 import { FiLogOut } from "react-icons/fi";
 import { useAuthContext } from "../context/authContext";
+import { getUserData } from "../utils/helpers";
 
 function SettingsModal({ isOpen }) {
   const { logout } = useAuthContext();
+  const { _id } = getUserData();
 
   return (
     <div className={`settingsModal ${isOpen && "settingsModal--show"}`}>
-      <LinkElement icon={<MdAccountCircle />} to="/profile">
+      <LinkElement icon={<MdAccountCircle />} to={`/profile/${_id}`}>
         my profile
       </LinkElement>
       <LinkElement icon={<HiUserGroup />} to="#">

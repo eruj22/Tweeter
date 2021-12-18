@@ -1,8 +1,9 @@
 import React from "react";
 import Avatar from "@mui/material/Avatar";
 import { convertDate } from "../utils/helpers";
+import { Link } from "react-router-dom";
 
-function AvatarWithText({ name, profilePicture, date }) {
+function AvatarWithText({ name, profilePicture, date, authorId }) {
   return (
     <div className="avatar">
       <Avatar
@@ -12,7 +13,9 @@ function AvatarWithText({ name, profilePicture, date }) {
       />
 
       <div className="avatar__text">
-        <p className="text--bold">{name}</p>
+        <Link to={`/profile/${authorId}`}>
+          <p className="text--bold">{name}</p>
+        </Link>
         <p className="text--small">{convertDate(date)}</p>
       </div>
     </div>

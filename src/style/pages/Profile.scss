@@ -1,5 +1,6 @@
 .profile {
   background-color: $clr-gray-light;
+  min-height: 100vh;
 
   &__cover {
     object-fit: cover;
@@ -9,13 +10,20 @@
     margin: 0 auto;
   }
 
-  &__content {
+  &__card {
     background-color: $clr-bg-white;
     border-radius: $border-radius;
     padding: 1rem;
     display: flex;
     align-items: flex-start;
     transform: translateY(-3rem);
+
+    .MuiAvatar-root {
+      width: 150px;
+      height: 150px;
+      transform: translateY(-3rem);
+      border: 3px solid $clr-bg-white;
+    }
   }
 
   &__info {
@@ -54,10 +62,26 @@
     margin-left: auto;
   }
 
-  .MuiAvatar-root {
-    width: 150px;
-    height: 150px;
-    transform: translateY(-3rem);
-    border: 3px solid $clr-bg-white;
+  &__content {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__links {
+    width: 30%;
+    height: fit-content;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: $clr-bg-white;
+    border-radius: $border-radius;
+  }
+
+  &__link a {
+    font-weight: bold;
+    color: $clr-text-black;
+  }
+
+  &__posts {
+    width: 70%;
   }
 }

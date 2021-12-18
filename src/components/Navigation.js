@@ -8,8 +8,7 @@ import { getUserData } from "../utils/helpers";
 import { BsFillCaretDownFill } from "react-icons/bs";
 
 function Navigation() {
-  const user = getUserData();
-  const { name, profilePicture } = user;
+  const { name, profilePicture } = getUserData();
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
 
   const navLinks = ["home", "explore", "bookmarks"];

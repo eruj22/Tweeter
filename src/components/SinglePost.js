@@ -7,7 +7,6 @@ import { BiComment } from "react-icons/bi";
 import { FaRetweet } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BsBookmark } from "react-icons/bs";
-import { BiImageAlt } from "react-icons/bi";
 import { Avatar } from "@mui/material";
 import TextField from "@mui/material/TextField";
 
@@ -20,6 +19,7 @@ function SinglePost({
   likes,
   retweeted,
   saved,
+  _id,
 }) {
   const [getPostAuthor, setGetPostAuthor] = useState("");
   const [isPostLoading, setIsPostLoading] = useState(true);
@@ -35,6 +35,7 @@ function SinglePost({
         setIsPostLoading(false);
       })
       .catch((error) => console.log(error));
+    // eslint-disable-next-line
   }, []);
 
   if (isPostLoading) {
@@ -47,6 +48,7 @@ function SinglePost({
         profilePicture={getPostAuthor.profilePicture}
         date={createdAt}
         name={getPostAuthor.name}
+        authorId={getPostAuthor._id}
       />
 
       <p className="post__description">{description}</p>
@@ -67,14 +69,10 @@ function SinglePost({
         <ButtonElement icon={<BsBookmark />} text="Saved" color="blue" />
       </div>
 
-      <div className="post__reply">
+      <form className="post__reply">
         <Avatar variant="rounded" src={user ? user.coverPicture : ""} />
-        <TextField label="Tweet your reply" variant="outlined" />
-
-        <button className="post__addImage">
-          <BiImageAlt />
-        </button>
-      </div>
+        <TextField placeholder="Tweet your reply" variant="outlined" />
+      </form>
     </article>
   );
 }
